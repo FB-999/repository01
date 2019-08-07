@@ -1,0 +1,530 @@
+
+        /* 滑动部分 */
+        .swiper-container {
+            width: 100%;
+            height: 7rem;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background: #fff; */
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide>a>img {
+            width: 95%;
+            height: 100%;
+            border: none;
+            border-radius: 1rem;
+            margin: 0 auto;
+
+        }
+
+        /* 搜索栏 */
+        .search {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            justify-content: space-around;
+            line-height: 2rem;
+            /* background-color: red; */
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        .search>span:nth-of-type(1) {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1rem;
+            /* background-color: #fff; */
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0px 2px 8px #444;
+            background-color: #fff;
+
+        }
+
+        .search-ban-parent {
+            background-color: #fff;
+            border-radius: 1rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            box-shadow: 0px 2px 8px #444;
+        }
+
+        .search input {
+            font-size: 1rem;
+            border: none;
+            outline: none;
+
+        }
+
+        .search .search-ban-parent span:nth-of-type(1) {
+            font-size: 1rem;
+
+        }
+
+        /* 精选 免费... */
+        .box {
+            height: 5rem;
+        }
+
+        .nav {
+            position: fixed;
+            left: 0;
+            top: 2.5rem;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: #888 0 3px 7px;
+            z-index: 3;
+            padding-top: .6rem;
+
+        }
+
+        .nlist {
+            display: flex;
+            width: 100%;
+            height: 2rem;
+
+        }
+
+        .nlist>li {
+            width: 50%;
+            text-align: center;
+        }
+
+        .nlist>li .non {
+            height: 2rem;
+            line-height: 2rem;
+            font-size: .7rem;
+            color: #000;
+        }
+
+        .nlist li .cur {
+
+            font-size: 1rem;
+            border-bottom: 2px #f00 solid;
+        }
+
+        .content {
+            width: 100%;
+            margin-top: .6rem;
+            display: none;
+        }
+
+        .shucheng .content-moren {
+            display: block;
+        }
+
+
+        .suicon {
+            width: 2rem;
+            height: 2rem;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin: 0.5rem 0 0 0;
+        }
+
+        /* 排行 精品.... */
+        .subnav {
+            width: 100%;
+            border-bottom: 1px solid #888;
+        }
+
+        .subnlist {
+            display: flex;
+            justify-content: space-around;
+            /* background-color: #f00; */
+            height: 5rem;
+        }
+
+        .subnlist>li {
+            width: 20%;
+            height: 5rem;
+            /* line-height: 5rem; */
+        }
+
+        .subnlist>li>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .subnlist>li>a>.shangmian {
+            height: 60%;
+            width: 100%;
+
+        }
+
+        .subnlist>li>a>.xiamian {
+            height: 40%;
+            width: 100%;
+
+        }
+
+        /* main部分的style */
+        .main {
+            border-bottom: 1px solid #888;
+        }
+
+        .title {
+            width: 100%;
+            height: 4rem;
+
+            /* background-color: blue; */
+        }
+
+        .title>p {
+            line-height: 4rem;
+        }
+
+        /* 左图右文 */
+        .first-div {
+            margin-bottom: 1rem;
+        }
+
+        .first-div a {
+            display: flex;
+
+        }
+
+
+        .zt img {
+            width: 100px;
+        }
+
+        .yw {
+            padding-left: 20px;
+            overflow: hidden;
+        }
+
+
+        .yw .p1 {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .yw .p2 {
+            height: 50px;
+            line-height: 30px;
+            font-size: 15px;
+        }
+
+        .yw .p3 {
+            height: 60px;
+            font-size: 15px;
+            line-height: 20px;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        /* 上图下文 */
+
+        .second-list {
+            /* width: 100%; */
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+        }
+
+        .second-list li {
+            width: 23%;
+
+
+            /* padding 左右自适应，a固定大小 */
+        }
+
+        .stxw {
+            width: 100%;
+        }
+
+
+
+        .second-list>li img {
+            width: 100%;
+            /* display: none */
+        }
+
+        .second-list>li>div>a p:nth-of-type(1) {
+            font-size: 1rem;
+        }
+
+        .second-list>li>div>a p:nth-of-type(2) {
+            font-size: 0.7rem;
+        }
+
+        /* 底部固定栏 */
+        .fnav {
+            background-color: #fff;
+            border-top: 1px solid #888;
+            width: 100%;
+            height: 3rem;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+
+        }
+
+        .fnav>li {
+            width: 25%;
+            text-align: center;
+
+        }
+
+        .fnav>li span {
+            font-size: 35px;
+        }
+
+        .fnav>li p {
+            font-size: 12px;
+        }
+
+        /* 24小时热销榜 */
+        .rxlist>li {
+            width: 28%;
+        }
+
+        .look-rank {
+            text-align: center;
+            width: 100%;
+            height: 2rem;
+            line-height: 2rem;
+
+        }
+
+        .look-rank p {
+            font-size: 0.7rem;
+        }
+
+        /* 我是有底线的 */
+        .footer {
+            width: 100%;
+            height: 5rem;
+            background-color: #ddd;
+            text-align: center;
+            padding-top: 0.9rem;
+        }
+
+        /* 书城 免费 */
+        .jingpinxianshimianfei .second-list a p:nth-of-type(2) {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .jingpinxianshimianfei .second-list a p:nth-of-type(3) {
+            color: #f00;
+            font-size: .7rem;
+        }
+
+        /* 计时器 */
+        .jingpinxianshimianfei .title .daojishi {
+            margin-top: 1.5rem;
+            float: right;
+            background-color: orange;
+            color: #fff;
+            border-radius: 0.75rem;
+            width: 7rem;
+            height: 1.5rem;
+            text-align: center;
+            line-height: 1.5rem;
+
+
+        }
+
+        /* .jingpinxianshimianfei .title .daojishi p {} */
+
+        .jingpinxianshimianfei .title .daojishi .iconfont {
+            font-size: 1rem;
+            margin-right: .2rem;
+        }
+
+        .jingpinxianshimianfei .title .daojishi .shi {
+            margin-left: .2rem;
+            margin-right: .2rem;
+            background-color: #fff;
+            color: orange;
+        }
+
+        .jingpinxianshimianfei .title .daojishi .fen {
+            margin-left: .2rem;
+            margin-right: .2rem;
+            background-color: #fff;
+            color: orange;
+        }
+
+        .jingpinxianshimianfei .title .daojishi .miao {
+            margin-left: .2rem;
+            background-color: #fff;
+            color: orange;
+
+        }
+
+        content .chuban-sublist {
+            justify-content: space-around;
+        }
+
+
+
+        /* 底部标签 */
+
+        .no-style {
+            color: #888;
+        }
+
+
+        .click-style {
+            color: #000;
+            font-weight: 1000;
+
+        }
+
+        .coat>div {
+            display: none;
+        }
+
+        .coat .coat-shujua {
+            display: block;
+        }
+
+
+        /* 书架 */
+        .coat-shujia-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 3rem;
+            background-color: #fff;
+            line-height: 3rem;
+            border-bottom: .5px solid #888;
+        }
+
+        .coat-shujia-nav span:nth-of-type(1) {
+            display: block;
+            float: left;
+
+
+        }
+
+        .coat-shujia-nav span:nth-of-type(2) {
+            float: left;
+        }
+
+        .coat-shujia-nav span:nth-of-type(3) {
+            float: right;
+            font-size: 1.5rem;
+            display: block;
+            width: 2rem;
+            text-align: center
+        }
+
+        .coat-shujia-nav span:nth-of-type(4) {
+            float: right;
+            font-size: 1.5rem;
+            display: block;
+            width: 2rem;
+            text-align: center
+        }
+
+        .coat-shujia-nav span:nth-of-type(5) {
+            float: right;
+            font-size: 1.5rem;
+            display: block;
+            width: 2rem;
+            text-align: center
+        }
+
+        .coat-shujia-nav-zlist-shujia {
+            position: fixed;
+            left: 0;
+            top: 3.2rem;
+            width: 49%;
+            height: 5rem;
+            border-radius: .5rem;
+            background-color: #fff;
+
+        }
+
+        .coat-shujia-nav-zlist-shujia div {
+            width: 100%;
+            height: 2.5rem;
+            padding-left: 1rem;
+            line-height: 2.5rem;
+        }
+
+        .coat-shujia-nav-zlist-gengduo {
+            position: fixed;
+            right: 0;
+            top: 3.2rem;
+            width: 49%;
+            height: 10rem;
+            border-radius: .5rem;
+            background-color: #fff;
+        }
+
+        .coat-shujia-nav-zlist-gengduo div {
+            width: 100%;
+            height: 2.5rem;
+            padding-left: 1rem;
+            line-height: 2.5rem;
+        }
+
+        .coat-shujia-nav-zlist-shujia .iconfont,
+        .coat-shujia-nav-zlist-gengduo .iconfont {
+            font-size: 1rem;
+        }
+
+        .coat-shujia-nav-zlist-shujia div span:nth-child(2),
+        .coat-shujia-nav-zlist-gengduo div span:nth-child(2) {
+            margin-left: .5rem;
+        }
+
+        .coat-shujia-box {
+            height: 5rem;
+        }
+
+        .coat-shujua .main {
+            border: none;
+        }
+
+        .swiper-iframe {
+            height: 7rem;
+        }
+   

@@ -1,0 +1,3238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>8002117093-范冰-网易云阅读</title>
+    <link rel="stylesheet" href="./icons/icon-1/iconfont.css">
+    <link rel="stylesheet" href="./icons/icon-3/iconfont.css">
+    <script src="./icons/icon-shuchengjingxuansubnav/iconfont.js"></script>
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./swiper/swiper.min.css">
+    <script src="./swiper/swiper.min.js"></script>
+    <style>
+        /* 滑动部分 */
+        .swiper-container {
+            width: 100%;
+            height: 7rem;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            /* background: #fff; */
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide>a>img {
+            width: 95%;
+            height: 100%;
+            border: none;
+            border-radius: 1rem;
+            margin: 0 auto;
+
+        }
+
+        /* 搜索栏 */
+        .search {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 2rem;
+            display: flex;
+            justify-content: space-around;
+            line-height: 2rem;
+            /* background-color: red; */
+            padding-top: 0.3rem;
+            padding-bottom: 0.3rem;
+            z-index: 2;
+            background-color: #fff;
+        }
+
+        .search>span:nth-of-type(1) {
+            display: block;
+            width: 2rem;
+            height: 2rem;
+            font-size: 1rem;
+            /* background-color: #fff; */
+            border-radius: 50%;
+            text-align: center;
+            box-shadow: 0px 2px 8px #444;
+            background-color: #fff;
+
+        }
+
+        .search-ban-parent {
+            background-color: #fff;
+            border-radius: 1rem;
+            padding-right: 0.5rem;
+            padding-left: 0.5rem;
+            box-shadow: 0px 2px 8px #444;
+        }
+
+        .search input {
+            font-size: 1rem;
+            border: none;
+            outline: none;
+
+        }
+
+        .search .search-ban-parent span:nth-of-type(1) {
+            font-size: 1rem;
+
+        }
+
+        /* 精选 免费... */
+        .box {
+            height: 5rem;
+        }
+
+        .nav {
+            position: fixed;
+            left: 0;
+            top: 2.5rem;
+            width: 100%;
+            background-color: #fff;
+            box-shadow: #888 0 3px 7px;
+            z-index: 3;
+            padding-top: .6rem;
+
+        }
+
+        .nlist {
+            display: flex;
+            width: 100%;
+            height: 2rem;
+
+        }
+
+        .nlist>li {
+            width: 50%;
+            text-align: center;
+        }
+
+        .nlist>li .non {
+            height: 2rem;
+            line-height: 2rem;
+            font-size: .7rem;
+            color: #000;
+        }
+
+        .nlist li .cur {
+
+            font-size: 1rem;
+            border-bottom: 2px #f00 solid;
+        }
+
+        .content {
+            width: 100%;
+            margin-top: .6rem;
+            display: none;
+        }
+
+        .shucheng .content-moren {
+            display: block;
+        }
+
+
+        .suicon {
+            width: 2rem;
+            height: 2rem;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            border: 1px solid #000;
+            border-radius: 50%;
+            margin: 0.5rem 0 0 0;
+        }
+
+        /* 排行 精品.... */
+        .subnav {
+            width: 100%;
+            border-bottom: 1px solid #888;
+        }
+
+        .subnlist {
+            display: flex;
+            justify-content: space-around;
+            /* background-color: #f00; */
+            height: 5rem;
+        }
+
+        .subnlist>li {
+            width: 20%;
+            height: 5rem;
+            /* line-height: 5rem; */
+        }
+
+        .subnlist>li>a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        .subnlist>li>a>.shangmian {
+            height: 60%;
+            width: 100%;
+
+        }
+
+        .subnlist>li>a>.xiamian {
+            height: 40%;
+            width: 100%;
+
+        }
+
+        /* main部分的style */
+        .main {
+            border-bottom: 1px solid #888;
+        }
+
+        .title {
+            width: 100%;
+            height: 4rem;
+
+            /* background-color: blue; */
+        }
+
+        .title>p {
+            line-height: 4rem;
+        }
+
+        /* 左图右文 */
+        .first-div {
+            margin-bottom: 1rem;
+        }
+
+        .first-div a {
+            display: flex;
+
+        }
+
+
+        .zt img {
+            width: 100px;
+        }
+
+        .yw {
+            padding-left: 20px;
+            overflow: hidden;
+        }
+
+
+        .yw .p1 {
+            height: 30px;
+            line-height: 30px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .yw .p2 {
+            height: 50px;
+            line-height: 30px;
+            font-size: 15px;
+        }
+
+        .yw .p3 {
+            height: 60px;
+            font-size: 15px;
+            line-height: 20px;
+
+            text-overflow: ellipsis;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        /* 上图下文 */
+
+        .second-list {
+            /* width: 100%; */
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+        }
+
+        .second-list li {
+            width: 23%;
+
+
+            /* padding 左右自适应，a固定大小 */
+        }
+
+        .stxw {
+            width: 100%;
+        }
+
+        
+
+        .second-list>li img {
+            width: 100%;
+            /* display: none */
+        }
+
+        .second-list>li>div>a p:nth-of-type(1) {
+            font-size: 1rem;
+        }
+
+        .second-list>li>div>a p:nth-of-type(2) {
+            font-size: 0.7rem;
+        }
+
+        /* 底部固定栏 */
+        .fnav {
+            background-color: #fff;
+            border-top: 1px solid #888;
+            width: 100%;
+            height: 3rem;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            display: flex;
+
+        }
+
+        .fnav>li {
+            width: 25%;
+            text-align: center;
+
+        }
+
+        .fnav>li span {
+            font-size: 35px;
+        }
+
+        .fnav>li p {
+            font-size: 12px;
+        }
+
+        /* 24小时热销榜 */
+        .rxlist>li {
+            width: 28%;
+        }
+
+        .look-rank {
+            text-align: center;
+            width: 100%;
+            height: 2rem;
+            line-height: 2rem;
+
+        }
+
+        .look-rank p {
+            font-size: 0.7rem;
+        }
+
+        /* 我是有底线的 */
+        .footer {
+            width: 100%;
+            height: 5rem;
+            background-color: #ddd;
+            text-align: center;
+            padding-top: 0.9rem;
+        }
+
+        /* 书城 免费 */
+        .jingpinxianshimianfei .second-list a p:nth-of-type(2) {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .jingpinxianshimianfei .second-list a p:nth-of-type(3) {
+            color: #f00;
+            font-size: .7rem;
+        }
+
+        /* 计时器 */
+        .jingpinxianshimianfei .title .daojishi {
+            margin-top: 1.5rem;
+            float: right;
+            background-color: orange;
+            color: #fff;
+            border-radius: 0.75rem;
+            width: 7rem;
+            height: 1.5rem;
+            text-align: center;
+            line-height: 1.5rem;
+
+
+        }
+
+        /* .jingpinxianshimianfei .title .daojishi p {} */
+
+        .jingpinxianshimianfei .title .daojishi .iconfont {
+            font-size: 1rem;
+            margin-right: .2rem;
+        }
+
+        .jingpinxianshimianfei .title .daojishi .shi {
+            margin-left: .2rem;
+            margin-right: .2rem;
+            background-color: #fff;
+            color: orange;
+        }
+
+        .jingpinxianshimianfei .title .daojishi .fen {
+            margin-left: .2rem;
+            margin-right: .2rem;
+            background-color: #fff;
+            color: orange;
+        }
+
+        .jingpinxianshimianfei .title .daojishi .miao {
+            margin-left: .2rem;
+            background-color: #fff;
+            color: orange;
+
+        }
+
+        content .chuban-sublist {
+            justify-content: space-around;
+        }
+
+
+
+        /* 底部标签 */
+
+        .no-style {
+            color: #888;
+        }
+
+
+        .click-style {
+            color: #000;
+            font-weight: 1000;
+
+        }
+
+        .coat>div {
+            display: none;
+        }
+
+        .coat .coat-shujua {
+            display: block;
+        }
+
+
+        /* 书架 */
+        .coat-shujia-nav {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 3rem;
+            background-color: #fff;
+            line-height: 3rem;
+            border-bottom: .5px solid #888;
+        }
+
+        .coat-shujia-nav span:nth-of-type(1) {
+            display: block;
+            float: left;
+
+
+        }
+
+        .coat-shujia-nav span:nth-of-type(2) {
+            float: left;
+        }
+
+        .coat-shujia-nav span:nth-of-type(3) {
+            float: right;
+            font-size: 1.5rem;
+            display: block;
+            width: 2rem;
+            text-align: center
+        }
+
+        .coat-shujia-nav span:nth-of-type(4) {
+            float: right;
+            font-size: 1.5rem;
+            display: block;
+            width: 2rem;
+            text-align: center
+        }
+
+        .coat-shujia-nav span:nth-of-type(5) {
+            float: right;
+            font-size: 1.5rem;
+            display: block;
+            width: 2rem;
+            text-align: center
+        }
+
+        .coat-shujia-nav-zlist-shujia {
+            position: fixed;
+            left: 0;
+            top: 3.2rem;
+            width: 49%;
+            height: 5rem;
+            border-radius: .5rem;
+            background-color: #fff;
+
+        }
+
+        .coat-shujia-nav-zlist-shujia div {
+            width: 100%;
+            height: 2.5rem;
+            padding-left: 1rem;
+            line-height: 2.5rem;
+        }
+
+        .coat-shujia-nav-zlist-gengduo {
+            position: fixed;
+            right: 0;
+            top: 3.2rem;
+            width: 49%;
+            height: 10rem;
+            border-radius: .5rem;
+            background-color: #fff;
+        }
+
+        .coat-shujia-nav-zlist-gengduo div {
+            width: 100%;
+            height: 2.5rem;
+            padding-left: 1rem;
+            line-height: 2.5rem;
+        }
+
+        .coat-shujia-nav-zlist-shujia .iconfont,
+        .coat-shujia-nav-zlist-gengduo .iconfont {
+            font-size: 1rem;
+        }
+
+        .coat-shujia-nav-zlist-shujia div span:nth-child(2),
+        .coat-shujia-nav-zlist-gengduo div span:nth-child(2) {
+            margin-left: .5rem;
+        }
+
+        .coat-shujia-box {
+            height: 5rem;
+        }
+
+        .coat-shujua .main {
+            border: none;
+        }
+
+        .swiper-iframe {
+            height: 7rem;
+        }
+
+        .wode iframe {
+            height: 30rem;
+        }
+
+        .coat-wode-box {
+            height: 3rem;
+        }
+        .wode  iframe{
+        height: 35rem;
+    }
+        .fenlei iframe{
+            height: 80rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="coat">
+        <div class="coat-shujua">
+            <div class="coat-shujia-nav">
+                <span>&nbsp;&nbsp;书架&nbsp;</span>
+                <span class="iconfont icon-close"></span>
+                <span class="iconfont icon-gengduo"></span>
+                <span class="iconfont icon-shizhong"></span>
+                <span class="iconfont icon-sousuo"></span>
+            </div>
+            <div class="coat-shujia-nav-zlist-shujia">
+                <div class="coat-shujia-nav-zlist-shujia-1">
+                    <span class="iconfont icon-shu"></span><span>书架</span>
+                </div>
+                <div class="coat-shujia-nav-zlist-shujia-2">
+                    <span class="iconfont icon-shu1"></span><span>本地书</span>
+                </div>
+            </div>
+            <div class="coat-shujia-nav-zlist-gengduo">
+                <div class="coat-shujia-nav-zlist-shujia-1">
+                    <span class="iconfont icon-daoru"></span><span>导入本机书籍</span>
+                </div>
+                <div class="coat-shujia-nav-zlist-shujia-2">
+                    <span class="iconfont icon-piliangguanli"></span><span>批量管理</span>
+                </div>
+                <div class="coat-shujia-nav-zlist-shujia-2">
+                    <span class="iconfont icon-liebiaomoshi"></span><span>列表模式</span>
+                </div>
+                <div class="coat-shujia-nav-zlist-shujia-2">
+                    <span class="iconfont icon-wifi"></span><span>WIFI传书</span>
+                </div>
+            </div>
+            <div class="coat-shujia-box"></div>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-3.jpg">
+                                    <p>复国</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-4.jpg">
+                                    <p>丹师剑宗</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-5.jpg">
+                                    <p>楼边人似玉</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-6.jpg">
+                                    <p>有效阅读</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-7.jpg">
+                                    <p>追风筝的人</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-8.jpg">
+                                    <p>至暗时刻</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-3.jpg">
+                                    <p>复国</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-4.jpg">
+                                    <p>丹师剑宗</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-5.jpg">
+                                    <p>楼边人似玉</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-6.jpg">
+                                    <p>有效阅读</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-7.jpg">
+                                    <p>追风筝的人</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-8.jpg">
+                                    <p>至暗时刻</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <div class="coat-shujia-box"></div>
+        </div>
+        <div class="shucheng">
+            <div class="box"></div>
+            <div class="search">
+                <span class="iconfont icon-nan"></span>
+                <div class="search-ban-parent">
+                    <input type="text" name="" id="search-ban">
+                    <span class="iconfont icon-sousuo"></span>
+                </div>
+            </div>
+            <nav class="nav">
+                <ul class="nlist">
+                    <li><a class="cur" href="#">精选</a></li>
+                    <li><a class="non" href="#">免费</a></li>
+                    <li><a class="non" href="#">男生</a></li>
+                    <li><a class="non" href="#">女生</a></li>
+                    <li><a class="non" href="#">出版</a></li>
+                    <li><a class="non" href="#">听书</a></li>
+                </ul>
+            </nav>
+            <div class="content content-moren">
+                <!-- 实现左右滑动的部分 -->
+
+                <iframe src="swiper.html" class="swiper-iframe"></iframe>
+                <nav class="subnav">
+                    <ul class="subnlist">
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconpaihang"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>排行</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconzuanshi"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>精品</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconyanjing"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>悬疑</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconbaguataiji"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>玄幻</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconjiangpai"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>独家</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <main class="main">
+                    <div class="benzhouqiangtui">
+                        <div class="title">
+                            <p>本周强推</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/shucheng-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            个体崛起
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>陈立飞&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>一本帮助普通人实现爆发式成长的人生规划书，教我们用高效方法循序渐进地撑起自己的野心。
+                                            《个体崛起》是一本写给未来“超级个体”的进阶指南。公号“Spenser”创始人陈立飞职场励志新作，两年时间从小职员到年入千万当老板，让成长焦虑的你找到循序渐进撑起自己的野心的高效方法！咪蒙、罗振宇诚意推荐！
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="second-list">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/shucheng-2.jpg">
+                                        <p>极简</p>
+                                        <p>艾米</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/shucheng-3.jpg">
+                                        <p>熊镇2</p>
+                                        <p>郭腾坚</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/shucheng-4.jpg">
+                                        <p>冬将军</p>
+                                        <p>甘耀明</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/shucheng-5.jpg">
+                                        <p>菜穗子</p>
+                                        <p>堀辰雄</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="renqi">
+                        <div class="title">
+                            <p>人气NO.1-本周爆款来了</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="24renxiaobang">
+                        <div class="title">
+                            <p>24小时热销榜</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="jingpinbidu">
+                        <div class="title">
+                            <p>精品必读</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="dajia">
+                        <div class="title">
+                            <p>大家都在看</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="gaoneng">
+                        <div class="title">
+                            <p>高能剧情，好看到停不下来</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="youzhi">
+                        <div class="title">
+                            <p>优质好文，从此不再书荒</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <div class="content">
+                <main class="main">
+                    <div class="jingpinxianshimianfei">
+                        <div class="title">
+
+                            <div class="daojishi">
+                                <p><span class="iconfont icon-shizhong"></span><span class="shi">01</span>:<span
+                                        class="fen">00</span>:<span class="miao">00</span></p>
+                            </div>
+                            <p>精品限时免费</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>5阅点/千字</p>
+                                        <p>免费</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>5阅点/千字</p>
+                                        <p>免费</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>5阅点/千字</p>
+                                        <p>免费</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="mianfeibenqizhuda">
+                        <div class="title">
+                            <p>【免费】本期主打</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="mianfeiqianlijiazuo">
+                        <div class="title">
+                            <p>【免费】潜力佳作</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="mianfeixinshusudi">
+                        <div class="title">
+                            <p>【免费】新书速递</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="chubanxianshizhekou">
+                        <div class="title">
+                            <p>【出版】限时折扣</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="tingshuxianshizhekou">
+                        <div class="title">
+                            <p>【听书】限时折扣</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <div class="content">
+                <iframe src="swiper.html" class="swiper-iframe"></iframe>
+                <main class="main">
+                    <div class="zhongbangtuijian">
+                        <div class="title">
+                            <p>重磅推荐</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="jipinshuangwen">
+                        <div class="title">
+                            <p>极品爽文</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="wanjiebang">
+                        <div class="title">
+                            <p>完结傍</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="haopingjiazuo">
+                        <div class="title">
+                            <p>好评佳作</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="zuihuoxinshubang">
+                        <div class="title">
+                            <p>最火新书榜</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <div class="content">
+                <iframe src="swiper.html" class="swiper-iframe"></iframe>
+                <main class="main">
+                    <div class="zhongbangtuijian">
+                        <div class="title">
+                            <p>重磅推荐</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="jipinshuangwen">
+                        <div class="title">
+                            <p>极品爽文</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="wanjiebang">
+                        <div class="title">
+                            <p>完结傍</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="haopingjiazuo">
+                        <div class="title">
+                            <p>好评佳作</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="zuihuoxinshubang">
+                        <div class="title">
+                            <p>最火新书榜</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <div class="content chuban-con">
+                <!-- 实现左右滑动的部分 -->
+                <iframe src="swiper.html" class="swiper-iframe"></iframe>
+
+                <nav class="subnav">
+                    <ul class="subnlist chuban-sublist">
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconzuanshi"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>特价</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconpaihang"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>排行</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconyanjing"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>影视</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="shangmian">
+                                    <svg class="suicon" aria-hidden="true">
+                                        <use xlink:href="#iconbaguataiji"></use>
+                                    </svg>
+                                </div>
+                                <div class="xiamian">
+                                    <p>套装</p>
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+                <main class="main">
+                    <div class="benzhouqiangtui">
+                        <div class="title">
+                            <p>本周强推</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <ul class="second-list">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>烽火戏诸侯</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>烽火戏诸侯</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>烽火戏诸侯</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>烽火戏诸侯</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="renqi">
+                        <div class="title">
+                            <p>人气NO.1-本周爆款来了</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="24renxiaobang">
+                        <div class="title">
+                            <p>24小时热销榜</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="jingpinbidu">
+                        <div class="title">
+                            <p>精品必读</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="dajia">
+                        <div class="title">
+                            <p>大家都在看</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="gaoneng">
+                        <div class="title">
+                            <p>高能剧情，好看到停不下来</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="youzhi">
+                        <div class="title">
+                            <p>优质好文，从此不再书荒</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <div class="content">
+                <iframe src="swiper.html" class="swiper-iframe"></iframe>
+                <main class="main">
+                    <div class="zhongbangtuijian">
+                        <div class="title">
+                            <p>重磅推荐</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="jipinshuangwen">
+                        <div class="title">
+                            <p>极品爽文</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="wanjiebang">
+                        <div class="title">
+                            <p>完结傍</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="haopingjiazuo">
+                        <div class="title">
+                            <p>好评佳作</p>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="first-div">
+                            <a href="#">
+                                <div class="zt"><img src="./images/jingxuan-bengzhouqiangtui-1.jpg" alt=""></div>
+                                <div class="yw">
+                                    <div class="p1">
+                                        <p>
+                                            人类简史：从动物到上帝
+                                        </p>
+                                    </div>
+                                    <div class="p2">
+                                        <p>尤瓦尔·赫拉利&nbsp;/&nbsp;社会学</p>
+                                    </div>
+                                    <div class="p3">
+                                        <p>几十万年前，地球上至少有6种不同的人种，但今天为什么只剩下智人；从原始洞穴走出到登上月球，从学会使用语言和文字到用互联网把整个世界联结起来，人类是如何一步步登上生物链的顶端，成为地球主宰的？
+                                        </p>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </main>
+                <main class="main">
+                    <div class="zuihuoxinshubang">
+                        <div class="title">
+                            <p>最火新书榜</p>
+                        </div>
+
+                        <ul class="second-list rxlist">
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="stxw">
+                                    <a class="bengzhouqiangtui-a" href="#">
+                                        <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                        <p>剑来</p>
+                                        <p>2.77亿点击</p>
+                                    </a>
+                                </div>
+                            </li>
+
+
+
+                        </ul>
+                        <div class="look-rank">
+                            <p>查看榜单&nbsp;&raquo;</p>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <footer class="footer">
+                <p>我是有底线的&nbsp;&ge;&nabla;&le;</p>
+            </footer>
+        </div>
+        <div class="fenlei">
+            <iframe src="./fenlei.html" frameborder="0"></iframe>
+        </div>
+        <div class="wode">
+            <iframe src="./wode.html" frameborder="0"></iframe>
+            <div class="coat-wode-box"></div>
+        </div>
+    </div>
+
+
+    <!-- 底部书架 书城 -->
+    <ul class="fnav">
+        <li class="click-style">
+            <div>
+                <span class="iconfont icon-shujia"></span>
+                <p>书架</p>
+            </div>
+        </li>
+        <li class="no-style">
+            <div>
+                <span class="iconfont icon-shu"></span>
+
+                <p>书城</p>
+            </div>
+        </li>
+        <li class="no-style">
+            <div>
+                <span class="iconfont icon-fenlei"></span>
+
+                <p>分类</p>
+            </div>
+        </li>
+        <li class="no-style">
+            <div>
+                <span class="iconfont icon-wode"></span>
+
+                <p>我的</p>
+            </div>
+        </li>
+    </ul>
+    <!-- 我是有底线的 -->
+
+    <!-- 实现左右滑动 -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    <!-- 顶部上下滑动变化 -->
+    <script>
+        var con = document.querySelectorAll(".content");
+        var box = document.querySelector(".box");
+        var search = document.querySelector(".search");
+        var nlist = document.querySelector(".nav")
+        console.log(con, box, search, nlist);
+        for (var i = 0; i < con.length; i++) {
+            var y;
+            con[i].ontouchstart = function (e) {
+                y = e.targetTouches[0].pageY;
+
+            }
+            con[i].ontouchend = function (e) {
+                var endy = e.changedTouches[0].pageY;
+                if (endy >= y) {
+                    console.log("xia");
+                    nlist.style.cssText += "top:2.5rem";
+                } else {
+                    console.log("shang");
+                    nlist.style.cssText += "top:0rem";
+                }
+            }
+        }
+
+
+    </script>
+    <!-- tsb：精选 免费 。。。 
+    tsb：书架 书城。。。-->
+    <script>
+
+        var a = document.querySelectorAll(".nlist a");
+        var content = document.querySelectorAll(".content");
+        //console.log(a,content);
+        for (var i = 0; i < a.length; i++) {
+            a[i].index = i;
+            a[i].onmouseover = function () {
+                for (var j = 0; j < a.length; j++) {
+                    a[j].className = "non";
+                    content[j].style.display = "none";
+                }
+                this.className = "cur";
+                content[this.index].style.display = "block";
+
+
+
+            }
+        }
+
+        var fnavli = document.querySelectorAll(".fnav li");
+        var condiv = document.querySelectorAll(".coat>div");
+        //console.log(fnavli,condiv);
+        for (let i = 0; i < fnavli.length; i++) {
+
+            fnavli[i].onmouseover = function () {
+                for (let j = 0; j < fnavli.length; j++) {
+                    fnavli[j].className = "no-style";
+                    condiv[j].style.display = "none";
+                }
+                fnavli[i].className = "click-style";
+                condiv[i].style.display = "block";
+
+
+
+            }
+        }
+    </script>
+    <!-- 计时器 -->
+    <script>
+        window.setTimeout(close, 0);
+
+        var dsq = document.querySelector(".daojishi");
+        var shi = dsq.querySelector(".shi");
+        var fen = dsq.querySelector(".fen");
+        var miao = dsq.querySelector(".miao");
+        console.log(shi, fen, miao);
+        var sec = 1 * 60 * 60;
+        function close() {
+            var timer = setInterval(function () {
+                sec--;
+                if (sec >= 0) {
+                    var h = jiuzheng(Math.floor(sec / 3600));
+                    var m = jiuzheng(Math.floor(sec % 3600 / 60));
+                    var s = jiuzheng(sec % 60);
+                    shi.innerText = h;
+                    fen.innerText = m;
+                    miao.innerText = s;
+                } else {
+                    clearInterval(timer);
+                }
+
+            }, 1000)
+
+        }
+        function jiuzheng(num) {
+            if (num < 10) {
+                num = "0" + num;
+            }
+            return num;
+        }
+    </script>
+    <!-- 书架的下拉框 -->
+    <script>
+        // var coat_shujia=document.querySelector(".coat-shujia");
+        var shujia_shujia = document.querySelector(".coat-shujia-nav span:nth-of-type(1)");
+        var shujia_gengduo = document.querySelector(".coat-shujia-nav span:nth-of-type(3)");
+        var con_shujia = document.querySelector(".coat-shujia-nav-zlist-shujia");
+        var con_gengduo = document.querySelector(".coat-shujia-nav-zlist-gengduo");
+        // console.log(shujia_shujia,shujia_gengduo,con_shujia,con_gengduo);
+        con_shujia.style.display = "none";
+        con_gengduo.style.display = "none";
+        var shujian_click = 0;
+        var gengduo_click = 0;
+        shujia_shujia.onclick = function () {
+            if (shujian_click == 0) {
+                shujian_click++;
+                con_shujia.style.display = "block";
+                // console.log(shujian_click);
+            } else {
+                shujian_click--;
+                con_shujia.style.display = "none";
+                // console.log(shujian_click);
+            }
+        }
+        shujia_gengduo.onclick = function () {
+            if (gengduo_click == 0) {
+                gengduo_click++;
+                con_gengduo.style.display = "block";
+                // console.log(shujian_click);
+            } else {
+                gengduo_click--;
+                con_gengduo.style.display = "none";
+                // console.log(shujian_click);
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/public.css">
+    <!-- <link rel="stylesheet" href="./icons/icon-3/iconfont.css"> -->
+    <!-- <link rel="stylesheet" href="./css/first.css"> -->
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #fff;
+        }
+
+        .nav {
+            /* position: fixed;
+            top: 0;
+            left: 0; */
+
+            width: 100%;
+
+            /* box-shadow: #888 0 3px 7px; */
+            /* z-index: 1; */
+            /* padding-top: .6rem; */
+
+        }
+
+        .nlist {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            height: 4rem;
+            background-color: #eee;
+
+        }
+
+        .nlist>li {
+
+            width: 14%;
+            text-align: center;
+        }
+
+        .nlist>li .non {
+            height: 2rem;
+            line-height: 2rem;
+            font-size: .7rem;
+            color: #000;
+        }
+
+        .nlist li .cur {
+            font-size: .6rem;
+            /* font-size: 1rem; */
+            color: #f00;
+            border-bottom: 2px #f00 solid;
+        }
+
+
+        .content {
+            display: none;
+        }
+
+
+        .saixuan {
+            width: 100%;
+            height: 2.5rem;
+        }
+
+        .saixuan .tou {
+            background-color: #fff;
+            width: 100%;
+            height: 1.8rem;
+            padding-top: .7rem;
+
+        }
+
+        .tou>p {
+            float: left;
+            font-size: .7rem;
+            margin-left: .5rem;
+
+        }
+
+        .tou .icon-close {
+            float: right;
+            color: #888;
+            font-size: 1rem;
+        }
+
+        .saixuan-saixuan {
+            float: right;
+            font-size: .7rem;
+            margin-right: 1.5rem;
+
+            color: #888;
+        }
+
+        .second-list {
+            /* width: 100%; */
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 1rem;
+        }
+
+        .second-list li {
+            width: 23%;
+
+
+            /* padding 左右自适应，a固定大小 */
+        }
+
+        .stxw {
+            width: 100%;
+        }
+
+
+
+        .second-list>li img {
+            width: 100%;
+            /* display: none */
+        }
+
+        .second-list>li>div>a p:nth-of-type(1) {
+            font-size: 1rem;
+        }
+
+        .second-list>li>div>a p:nth-of-type(2) {
+            font-size: 0.7rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav fenlei-nav">
+        <ul class="nlist fenlei-nlist">
+            <li><a class="cur" href="#">都市</a></li>
+            <li><a class="non" href="#">玄幻</a></li>
+            <li><a class="non" href="#">悬疑</a></li>
+            <li><a class="non" href="#">历史</a></li>
+            <li><a class="non" href="#">军事</a></li>
+            <li><a class="non" href="#">科幻</a></li>
+            <li><a class="non" href="#">同人</a></li>
+            <li><a class="non" href="#">短片</a></li>
+        </ul>
+        <div class="saixuan">
+            <div class="tou">
+                <p>
+                    <span>人气</span>|
+                    <span>畅销</span>|
+                    <span>最新</span>
+                </p>
+                <span class="saixuan-saixuan">筛选</span><span class="iconfont icon-close"></span>
+            </div>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+
+
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>明国奇人</p>
+                                    <p>理科佛</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>2.77亿点击</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>2.77亿点击</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-3.jpg">
+                                    <p>复国</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-4.jpg">
+                                    <p>丹师剑宗</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-5.jpg">
+                                    <p>楼边人似玉</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-6.jpg">
+                                    <p>有效阅读</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-7.jpg">
+                                    <p>追风筝的人</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-8.jpg">
+                                    <p>至暗时刻</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>登临</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>抽刀断水</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-3.jpg">
+                                    <p>复国</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-4.jpg">
+                                    <p>丹师剑宗</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-5.jpg">
+                                    <p>楼边人似玉</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-6.jpg">
+                                    <p>有效阅读</p>
+                                    <p>丛非从</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-7.jpg">
+                                    <p>追风筝的人</p>
+                                    <p>丛非从</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-8.jpg">
+                                    <p>至暗时刻</p>
+                                    <p>丛非从</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-3.jpg">
+                                    <p>复国</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-4.jpg">
+                                    <p>丹师剑宗</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-5.jpg">
+                                    <p>楼边人似玉</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-3.jpg">
+                                    <p>复国</p>
+                                    <p>读到56%</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-4.jpg">
+                                    <p>丹师剑宗</p>
+                                    <p>两章未读</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-5.jpg">
+                                    <p>楼边人似玉</p>
+                                    <p>读到11%</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>登临</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>抽刀断水</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>登临</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>抽刀断水</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>登临</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>抽刀断水</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>登临</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>抽刀断水</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+        <div class="content">
+            <main class="main">
+                <div class="24renxiaobang">
+                    <ul class="second-list rxlist">
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-1.jpg">
+                                    <p>爱情初始化</p>
+                                    <p>登临</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/book-2.jpg">
+                                    <p>民国奇人</p>
+                                    <p>抽刀断水</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="stxw">
+                                <a class="bengzhouqiangtui-a" href="#">
+                                    <img src="images/jingxuan-bengzhouqiangtui-2.jpg">
+                                    <p>剑来</p>
+                                    <p>宇晨</p>
+                                </a>
+                            </div>
+                        </li>
+
+
+
+                    </ul>
+
+                </div>
+            </main>
+        </div>
+    </nav>
+    <script>
+
+        var a = document.querySelectorAll(".nlist a");
+        var content = document.querySelectorAll(".content");
+        //console.log(a,content);
+        a[0].className = "cur";
+        content[0].style.display = "block";
+        for (var i = 0; i < a.length; i++) {
+            a[i].index = i;
+            a[i].onmouseover = function () {
+                for (var j = 0; j < a.length; j++) {
+                    a[j].className = "non";
+                    content[j].style.display = "none";
+                }
+                this.className = "cur";
+                content[this.index].style.display = "block";
+
+
+
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
